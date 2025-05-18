@@ -105,7 +105,7 @@ contract FundMe {
 
     modifier windowClosed() {
         require(
-            block.timestamp > deploymentTimestamp + lockTime,
+            block.timestamp >= deploymentTimestamp + lockTime,
             "window is not closed"
         );
         _;
